@@ -140,7 +140,6 @@ public class Player : LivingEntity
             if (Input.GetKeyDown(KeyCode.R))
             {
                 gunController.Reload();
-                animator.SetTrigger("Reload");
             }
 
             if (Input.GetKeyDown(KeyCode.Escape)) 

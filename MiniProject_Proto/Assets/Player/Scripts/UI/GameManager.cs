@@ -31,8 +31,6 @@ public class GameManager : MonoBehaviour
         Time.timeScale = 1; //시작할 때마다 시간을 흐르게 한다.
 
         door = GameObject.FindGameObjectWithTag("Door");
-
-        
     }
 
     // Update is called once per frame

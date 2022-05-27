@@ -31,13 +31,13 @@ public class SteminaUI : MonoBehaviour
         set
         {
             MaxStemina = value;
+            SteminaGUI.maxValue = MAXSTEMINA;
         }
     }
 
     // Start is called before the first frame update
     void Start()
     {
-        SteminaGUI.maxValue = MAXSTEMINA;
         STEMINA = MAXSTEMINA;
     }
 
