@@ -82,7 +82,7 @@ public class HM_BOSS_FSM : MonoBehaviour
     {
         if (bossCTL.isKuckback == false)
         {
-            if (dis < 5)
+            if (dis < 8)
             {
                 CloseToPlayer();
                 bossState = BossState.ATTACK;
@@ -99,7 +99,7 @@ public class HM_BOSS_FSM : MonoBehaviour
     {
         boss_AI.SetDestination(target.position);
 
-        if(dis < 5)
+        if(dis < 8)
         {
             CloseToPlayer();
 
@@ -117,7 +117,7 @@ public class HM_BOSS_FSM : MonoBehaviour
 
     private void BossAttackUpdate()
     {
-        if(dis > 5)
+        if(dis > 8)
         {
             NotCloseToPlayer();
 

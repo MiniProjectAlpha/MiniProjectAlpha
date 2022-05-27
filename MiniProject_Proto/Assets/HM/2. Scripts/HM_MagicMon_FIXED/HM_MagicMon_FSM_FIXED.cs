@@ -14,7 +14,7 @@ public class HM_MagicMon_FSM_FIXED : MonoBehaviour
     }
     public MagicMonState mmstate;
 
-    GameObject player;
+    public GameObject player;
     Transform target;
 
     public float dis;
@@ -54,6 +54,8 @@ public class HM_MagicMon_FSM_FIXED : MonoBehaviour
     {
         if (player != null)
         {
+            transform.LookAt(player.transform.position);
+
             dis = Vector3.Distance(target.position, transform.position);
 
 
@@ -83,7 +85,7 @@ public class HM_MagicMon_FSM_FIXED : MonoBehaviour
             CloseToAttack();
 
             mmstate = MagicMonState.ATTACK;
-            magicmonCTL.StartCoroutine("DelayAttack");
+            
         }
         if(magicmonCTL.isKuckBack == true)
         {

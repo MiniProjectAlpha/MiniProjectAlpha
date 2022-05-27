@@ -663,7 +663,7 @@ MonoBehaviour:
   magic_Pos: {fileID: 5095492585054371987}
   magic_prefeb: {fileID: 1241202137920814772, guid: 6b578ee75a7c99142afdaa3d549cd15d, type: 3}
   attack_Timer: 1.5
-  delay_AttackTime: 4
+  delay_AttackTime: 2
   isDie: 0
   isKuckBack: 0
 --- !u!114 &7686762563418690953
@@ -679,6 +679,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mmstate: 0
+  player: {fileID: 0}
   dis: 0
 --- !u!195 &4303503588478292349
 NavMeshAgent:

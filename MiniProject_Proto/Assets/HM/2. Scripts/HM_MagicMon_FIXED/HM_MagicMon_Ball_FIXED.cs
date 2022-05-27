@@ -19,6 +19,7 @@ public class HM_MagicMon_Ball_FIXED : MonoBehaviour
 
         magicmonCTL = GameObject.FindGameObjectWithTag("MagicMon").GetComponent<HM_MagicMon_CTL_FIXED>();
 
+      
         dir = player.transform.position - transform.position;
 
         dir.Normalize(); 

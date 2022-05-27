@@ -47,13 +47,13 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 3.5
-  m_Acceleration: 8
+  m_Speed: 8
+  m_Acceleration: 4
   avoidancePriority: 50
-  m_AngularSpeed: 120
+  m_AngularSpeed: 150
   m_StoppingDistance: 0
   m_AutoTraverseOffMeshLink: 1
-  m_AutoBraking: 1
+  m_AutoBraking: 0
   m_AutoRepath: 1
   m_Height: 1
   m_BaseOffset: 0
@@ -80,11 +80,11 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1050430728716777226}
   serializedVersion: 2
-  m_Mass: 10
+  m_Mass: 6
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -100,7 +100,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a29e4d2c03364eb41b382f9b4f899af2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  StartingHealth: 100
+  StartingHealth: 600
   health: 0
   isDie: 0
   isKuckback: 0
@@ -125,6 +125,30 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1050430728716777463}
     m_Modifications:
+    - target: {fileID: 8037379983249300713, guid: 2caf0678b0cc31d4d82bc2e287207620, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8037379983249300713, guid: 2caf0678b0cc31d4d82bc2e287207620, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8037379983249300713, guid: 2caf0678b0cc31d4d82bc2e287207620, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8037379983249300715, guid: 2caf0678b0cc31d4d82bc2e287207620, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8037379983249300715, guid: 2caf0678b0cc31d4d82bc2e287207620, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8037379983249300715, guid: 2caf0678b0cc31d4d82bc2e287207620, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8037379983249300719, guid: 2caf0678b0cc31d4d82bc2e287207620, type: 3}
       propertyPath: m_RootOrder
       value: 0

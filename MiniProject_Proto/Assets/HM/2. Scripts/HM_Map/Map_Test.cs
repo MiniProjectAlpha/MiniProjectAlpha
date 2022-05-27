@@ -47,6 +47,5 @@ public class Map_Test : MonoBehaviour
     void Update()
     {
         SetDoor();
-        print(open);
     }
 }

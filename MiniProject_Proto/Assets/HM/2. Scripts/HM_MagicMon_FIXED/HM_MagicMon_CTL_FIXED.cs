@@ -29,7 +29,6 @@ public class HM_MagicMon_CTL_FIXED : LivingEntity
     protected override void Start()
     {
         base.Start();
-        magic_Pos = this.transform.GetChild(2).gameObject.transform;
         col = GetComponent<CapsuleCollider>();
         rig = GetComponent<Rigidbody>();
         magic_AI = GetComponent<NavMeshAgent>();
@@ -46,6 +45,10 @@ public class HM_MagicMon_CTL_FIXED : LivingEntity
         if (base.dead == true)
         {
             MagicMon_Die();
+        }
+        else
+        {
+            DelayAttack();
         }
     }
 
@@ -88,25 +91,20 @@ public class HM_MagicMon_CTL_FIXED : LivingEntity
         livingEntity.TakeHit2(damage);
     }
 
-    public IEnumerator DelayAttack()
+    void DelayAttack()
     {
-        yield return new WaitForSeconds(0.1f);
-
-        if(magicmonFsm.mmstate == HM_MagicMon_FSM_FIXED.MagicMonState.ATTACK)
+        if(isDie == false && magicmonFsm.mmstate == HM_MagicMon_FSM_FIXED.MagicMonState.ATTACK)
         {
-            StartCoroutine("InstantiateMagic");
+            attack_Timer += Time.deltaTime;
+
+            if(attack_Timer > attack_Delay)
+            {
+                GameObject magic = Instantiate(magic_prefeb);
+
+                magic.transform.position = magic_Pos.position;
+
+                attack_Timer = 0;
+            }
         }
-        
-    }
-
-    IEnumerator InstantiateMagic()
-    {
-        GameObject magic = Instantiate(magic_prefeb);
-
-        magic.transform.position = magic_Pos.position;
-
-        yield return new WaitForSeconds(delay_AttackTime);
-
-        StartCoroutine("DelayAttack");
     }
 }
