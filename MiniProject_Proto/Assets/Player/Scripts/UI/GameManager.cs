@@ -79,6 +79,7 @@ public class GameManager : MonoBehaviour
 
         if (Gosts.Length == 0 && Magics.Length == 0)
         {
-            door.GetComponent<Map_Test>().open = false;        }
+            door.GetComponent<Map_Test>().open = false;        
+        }
     }
 }
