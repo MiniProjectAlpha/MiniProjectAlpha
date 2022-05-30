@@ -790,7 +790,6 @@ GameObject:
   - component: {fileID: 4303503588478292349}
   - component: {fileID: 7686762563418690958}
   - component: {fileID: 8911437130704346545}
-  - component: {fileID: 7494051984931017184}
   m_Layer: 6
   m_Name: MagicMon_FIXED
   m_TagString: MagicMon
@@ -925,18 +924,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 116
   m_CollisionDetection: 0
---- !u!114 &7494051984931017184
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4303503588468941502}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 82f0c589fb6328b48b36dbb673c8ddbd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &4303503588468941504
 GameObject:
   m_ObjectHideFlags: 0
@@ -2107,6 +2094,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1952527356560533383}
   - component: {fileID: 5357667890823513693}
+  - component: {fileID: 7959750532653691028}
   m_Layer: 5
   m_Name: HpUI
   m_TagString: Untagged
@@ -2188,6 +2176,18 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &7959750532653691028
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7791512487174918408}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82f0c589fb6328b48b36dbb673c8ddbd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8641192634146884233
 GameObject:
   m_ObjectHideFlags: 0
