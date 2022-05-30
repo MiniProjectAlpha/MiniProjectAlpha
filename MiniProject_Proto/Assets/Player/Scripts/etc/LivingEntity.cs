@@ -5,15 +5,20 @@ using UnityEngine;
 public class LivingEntity : MonoBehaviour, IDamageable
 {
     public float StartingHealth; //시작 체력(최대 체력)
-
     public float health; //현재 체력   
+    public HpUI hpUI;
 
     public float HEALTH
     {
         get { return health; }
 
-        set {
+        set
+        {
             health = value;
+            if (hpUI)
+            {
+                hpUI.HP = health;
+            }
         }
     } //체력 변형
 
@@ -24,13 +29,17 @@ public class LivingEntity : MonoBehaviour, IDamageable
     protected virtual void Start()
     {
         HEALTH = StartingHealth;
+        
+        //체력 연동
+        hpUI.MAXHP = StartingHealth;
+        hpUI.HP = health;
     }
 
-    public void TakeHit(float damage, RaycastHit hit) 
+    public void TakeHit(float damage, RaycastHit hit)
     {
         HEALTH -= damage;
 
-        if (health <= 0 && !dead) 
+        if (health <= 0 && !dead)
         {
             Dead();
         }
@@ -46,7 +55,7 @@ public class LivingEntity : MonoBehaviour, IDamageable
         }
     }
 
-    public void Dead() 
+    public void Dead()
     {
         dead = true;
         Destroy(gameObject, 2f);
@@ -56,6 +65,6 @@ public class LivingEntity : MonoBehaviour, IDamageable
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 }

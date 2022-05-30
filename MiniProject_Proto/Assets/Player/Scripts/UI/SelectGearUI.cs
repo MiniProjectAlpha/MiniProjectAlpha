@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
@@ -14,93 +15,118 @@ public class SelectGearUI : MonoBehaviour
     } //단독
 
     #region 주무기 선택
-    public void selectMainHG() 
-    {
-        Gun.selectedMain = Gun.SelectedMain.HG;
-    }
+    public TMP_Dropdown mainSelect; // 드롭다운
 
-    public void selectMainSMG()
+    public void Select_Main()
     {
-        Gun.selectedMain = Gun.SelectedMain.SMG;
-    }
+ 
+        switch (mainSelect.value) 
+        {
+            case 0:
+                Gun.selectedMain = Gun.SelectedMain.HG;
+                break;
+            
+            case 1:
+                Gun.selectedMain = Gun.SelectedMain.SMG;
+                break;
 
-    public void selectMainAR()
-    {
-        Gun.selectedMain = Gun.SelectedMain.AR;
-    }
+            case 2:
+                Gun.selectedMain = Gun.SelectedMain.AR;
+                break;
 
-    public void selectMainSR()
-    {
-        Gun.selectedMain = Gun.SelectedMain.SR;
+            case 3:
+                Gun.selectedMain = Gun.SelectedMain.SR;
+                break;
+        }
     }
 
     #endregion
 
     #region 부무기 선택
-    public void selectSubBL()
-    {
-        Gun.selectedSub = Gun.SelectedSub.BL;
-    }
+    public TMP_Dropdown subSelect; // 드롭다운
 
-    public void selectSubSG()
+    public void Select_Sub()
     {
-        Gun.selectedSub = Gun.SelectedSub.SG;
-    }
 
-    public void selectSubGL()
-    {
-        Gun.selectedSub = Gun.SelectedSub.GL;
-    }
 
-    public void selectSubRL()
-    {
-        Gun.selectedSub = Gun.SelectedSub.RL;
+        switch (subSelect.value)
+        {
+            case 0:
+                Gun.selectedSub = Gun.SelectedSub.BL;
+                break;
+
+            case 1:
+                Gun.selectedSub = Gun.SelectedSub.SG;
+                break;
+
+            case 2:
+                Gun.selectedSub = Gun.SelectedSub.GL;
+                break;
+
+            case 3:
+                Gun.selectedSub = Gun.SelectedSub.RL;
+                break;
+        }
     }
 
     #endregion
 
     #region 회피형태 선택
 
-    public void selectDodgeSPR()
-    {
-        Player.selectDodge = Player.SelectDodge.SPR;
-    }
+    public TMP_Dropdown dodgeSelect; // 드롭다운
 
-    public void selectDodgeSLD()
+    public void Select_dodge()
     {
-        Player.selectDodge = Player.SelectDodge.SLD;
-    }
 
-    public void selectDodgeBLK()
-    {
-        Player.selectDodge = Player.SelectDodge.BLK;
+
+        switch (dodgeSelect.value)
+        {
+            case 0:
+                Player.selectDodge = Player.SelectDodge.SPR;
+                break;
+
+            case 1:
+                Player.selectDodge = Player.SelectDodge.SLD;
+                break;
+
+            case 2:
+                Player.selectDodge = Player.SelectDodge.BLK;
+                break;
+        }
     }
 
     #endregion
 
     #region 보조장비 선택
-    public void selectSptAtk() //공격 부스트
-    {
-        Gun.selectSpt = Gun.SelectSpt.ATK;
-        Player.moveSpt = Player.MoveSpt.NON;
-    }
 
-    public void selectSptMag() //총탄량 부스트
-    {
-        Gun.selectSpt = Gun.SelectSpt.MAG;
-        Player.moveSpt = Player.MoveSpt.NON;
-    }
+    public TMP_Dropdown supportSelect; // 드롭다운
 
-    public void selectSptRel() //재장전 부스트
+    public void Select_Support()
     {
-        Gun.selectSpt = Gun.SelectSpt.REL;
-        Player.moveSpt = Player.MoveSpt.NON;
-    }
 
-    public void selectSptSpd() //이동 부스트
-    {
-        Gun.selectSpt = Gun.SelectSpt.NON;
-        Player.moveSpt = Player.MoveSpt.SPD;
+
+        switch (supportSelect.value)
+        {
+            case 0:
+                Gun.selectSpt = Gun.SelectSpt.ATK;
+                Player.moveSpt = Player.MoveSpt.NON;
+                break;
+
+            case 1:
+                Gun.selectSpt = Gun.SelectSpt.MAG;
+                Player.moveSpt = Player.MoveSpt.NON;
+                break;
+
+            case 2:
+                Gun.selectSpt = Gun.SelectSpt.REL;
+                Player.moveSpt = Player.MoveSpt.NON;
+                break;
+            
+            case 3:
+                Gun.selectSpt = Gun.SelectSpt.NON;
+                Player.moveSpt = Player.MoveSpt.SPD;
+                break;
+        }
     }
     #endregion
 
@@ -120,5 +146,8 @@ public class SelectGearUI : MonoBehaviour
 
     private void Start()
     {
+
     }
+
+   
 }

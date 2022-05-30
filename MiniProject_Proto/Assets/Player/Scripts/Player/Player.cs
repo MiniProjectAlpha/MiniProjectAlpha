@@ -53,6 +53,8 @@ public class Player : LivingEntity
         controller = GetComponent<PlayerController>();
         gunController = GetComponent<GunController>();
         viewCamera = Camera.main;
+        
+        
 
         Vector3 moveInput = new(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical")); //입력
 
@@ -81,13 +83,11 @@ public class Player : LivingEntity
                 break;
         }
 
-        
+
         if (selectDodge == SelectDodge.SPR) //달리기 선택시
         {
             SteminaUI.instance.STEMINA = stamina;
             SteminaUI.instance.MAXSTEMINA = staminaMax;
-
-            CoolDownUI.instance.coolDownUi.enabled = false;
         }
 
         if ((selectDodge == SelectDodge.SLD) || (selectDodge == SelectDodge.BLK))
@@ -96,8 +96,7 @@ public class Player : LivingEntity
         }
 
        
-
-        isPause = false;        
+        isPause = false;  
     }
 
     // Update is called once per frame
@@ -140,7 +139,6 @@ public class Player : LivingEntity
             if (Input.GetKeyDown(KeyCode.R))
             {
                 gunController.Reload();
-                animator.SetTrigger("Reload");
             }
 
             if (Input.GetKeyDown(KeyCode.Escape)) 
@@ -218,8 +216,6 @@ public class Player : LivingEntity
         else if (dead == true) 
         {
             animator.SetTrigger("Dead");
-
-            
 
             GameManager.instance.gameOverUI.SetActive(true);
             GameManager.instance.PlayGUI.SetActive(false);
