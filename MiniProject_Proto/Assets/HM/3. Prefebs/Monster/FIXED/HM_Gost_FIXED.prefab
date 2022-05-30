@@ -123,6 +123,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1509151230206708845}
   - component: {fileID: 3988556836377480580}
+  - component: {fileID: 6229946017676032413}
   m_Layer: 5
   m_Name: HpUI
   m_TagString: Untagged
@@ -204,6 +205,18 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &6229946017676032413
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1012958070299961343}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82f0c589fb6328b48b36dbb673c8ddbd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1855338244469218432
 GameObject:
   m_ObjectHideFlags: 0
@@ -737,7 +750,6 @@ GameObject:
   - component: {fileID: 7151976945580932804}
   - component: {fileID: 7151976945580932806}
   - component: {fileID: 7151976945580932807}
-  - component: {fileID: 1337051296346989639}
   m_Layer: 6
   m_Name: HM_Gost_FIXED
   m_TagString: Gost
@@ -868,18 +880,6 @@ MonoBehaviour:
   health: 0
   hpUI: {fileID: 1279206733829212829}
   is_Die: 0
---- !u!114 &1337051296346989639
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1855338244469218450}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 82f0c589fb6328b48b36dbb673c8ddbd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1855338244469218452
 GameObject:
   m_ObjectHideFlags: 0

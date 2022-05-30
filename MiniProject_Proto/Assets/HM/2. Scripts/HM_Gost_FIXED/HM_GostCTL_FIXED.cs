@@ -35,7 +35,6 @@ public class HM_GostCTL_FIXED : LivingEntity
             Gost_Die();
         }
 
-        print(base.HEALTH);
     }
 
     public override void TakeHit2(float damage)
