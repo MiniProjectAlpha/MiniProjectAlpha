@@ -217,6 +217,8 @@ public class Gun : MonoBehaviour
         WeaponUI.instance.MAXMAIN = maxBullet;
         WeaponUI.instance.ISRELOAD = isreload;
 
+        WeaponUI.instance.RELOAD = reloadTime;
+
         switch (selectedMain) 
         {
             case SelectedMain.HG:
