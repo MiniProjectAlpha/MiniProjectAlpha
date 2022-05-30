@@ -17,7 +17,17 @@ public class WeaponUI : MonoBehaviour
     
     public Text mainUI; //주무장 잔탄 연동
     public bool isReload; //재장전 여부
-    
+
+    public Image HG;
+    public Image SMG;
+    public Image AR;
+    public Image SR;
+
+    public Slider reloadbar; //재장전 바
+    float reloadtime; //재장전 시간
+
+    float reloadtimer;
+
     public int MAXMAIN 
     {
         get { return max_main; }
@@ -43,10 +53,36 @@ public class WeaponUI : MonoBehaviour
         {
             isReload = value;
 
-            if (isReload == true) 
+            if (isReload == true)
             {
+                reloadbar.gameObject.SetActive(true);
                 mainUI.text = "Reloading...";
             }
+            else if (isReload == false) 
+            {
+                reloadbar.gameObject.SetActive(false);
+            }
+        }
+    }
+
+    public float RELOAD 
+    {
+        get { return reloadtime; }
+        set 
+        {
+            reloadtime = value;
+            
+            reloadbar.maxValue = reloadtime;
+        }
+    }
+
+    float TIMER
+    {
+        get { return reloadtimer; }
+        set
+        {
+            reloadtimer = value;
+            reloadbar.value = reloadtimer;
         }
     }
     #endregion
@@ -64,6 +100,10 @@ public class WeaponUI : MonoBehaviour
     public Text SubCharge; //부무장 충전 연동
 
 
+    public Image BL;
+    public Image SG;
+    public Image GL;
+    public Image RL;
 
 
     public int SUBMAX //부 무장 최대 스톡
@@ -137,6 +177,19 @@ public class WeaponUI : MonoBehaviour
     private void Start()
     {
         DELAY = 0;
+
+        HG.gameObject.SetActive(false);
+        SMG.gameObject.SetActive(false);
+        AR.gameObject.SetActive(false);
+        SR.gameObject.SetActive(false);
+
+        BL.gameObject.SetActive(false);
+        SG.gameObject.SetActive(false);
+        GL.gameObject.SetActive(false);
+        RL.gameObject.SetActive(false);
+
+        TIMER = RELOAD;
+        reloadbar.gameObject.SetActive(false);
     }
 
     void Update()

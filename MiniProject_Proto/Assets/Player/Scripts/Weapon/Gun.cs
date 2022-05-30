@@ -217,9 +217,43 @@ public class Gun : MonoBehaviour
         WeaponUI.instance.MAXMAIN = maxBullet;
         WeaponUI.instance.ISRELOAD = isreload;
 
+        WeaponUI.instance.RELOAD = reloadTime;
+
+        switch (selectedMain) 
+        {
+            case SelectedMain.HG:
+                WeaponUI.instance.HG.gameObject.SetActive(true);
+                break;
+            case SelectedMain.SMG:
+                WeaponUI.instance.SMG.gameObject.SetActive(true);
+                break;
+            case SelectedMain.AR:
+                WeaponUI.instance.AR.gameObject.SetActive(true);
+                break;
+            case SelectedMain.SR:
+                WeaponUI.instance.SR.gameObject.SetActive(true);
+                break;
+        }
+
         //보조 무기
         WeaponUI.instance.REMAINSUB = subStock;
         WeaponUI.instance.SUBMAX = maxStock;
+
+        switch (selectedSub)
+        {
+            case SelectedSub.BL:
+                WeaponUI.instance.BL.gameObject.SetActive(true);
+                break;
+            case SelectedSub.SG:
+                WeaponUI.instance.SG.gameObject.SetActive(true);
+                break;
+            case SelectedSub.GL:
+                WeaponUI.instance.GL.gameObject.SetActive(true);
+                break;
+            case SelectedSub.RL:
+                WeaponUI.instance.RL.gameObject.SetActive(true);
+                break;
+        }
     }
 
     IEnumerator SubCharge()
