@@ -2555,6 +2555,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Boss_1
       objectReference: {fileID: 0}
+    - target: {fileID: 1050430728716777460, guid: 50d8c49a09c50af41bc9da69a0625c9e, type: 3}
+      propertyPath: StartingHealth
+      value: 300
+      objectReference: {fileID: 0}
     - target: {fileID: 1050430728716777463, guid: 50d8c49a09c50af41bc9da69a0625c9e, type: 3}
       propertyPath: m_RootOrder
       value: 1
