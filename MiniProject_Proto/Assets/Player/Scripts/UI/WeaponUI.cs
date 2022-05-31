@@ -76,7 +76,7 @@ public class WeaponUI : MonoBehaviour
         }
     }
 
-    float TIMER
+    public float TIMER
     {
         get { return reloadtimer; }
         set
@@ -178,6 +178,7 @@ public class WeaponUI : MonoBehaviour
     {
         DELAY = 0;
 
+        //장비 이미지 맞추어 나오게 하기 위해 전부 보이지 않게
         HG.gameObject.SetActive(false);
         SMG.gameObject.SetActive(false);
         AR.gameObject.SetActive(false);
@@ -188,8 +189,15 @@ public class WeaponUI : MonoBehaviour
         GL.gameObject.SetActive(false);
         RL.gameObject.SetActive(false);
 
-        TIMER = RELOAD;
+        //재장전 할때만 보이게 하기
         reloadbar.gameObject.SetActive(false);
+
+
+        //주무기, 보조장비 : 단순 수치화 및 설명
+        
+        
+        
+        //보조무기, 회피 : 이미지 삽입
     }
 
     void Update()

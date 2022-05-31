@@ -55,8 +55,17 @@ public class Gun : MonoBehaviour
     }
     IEnumerator ReloadMove() //재장전 매커니즘;
     {
+        //재장전 매커니즘 시각화
+        WeaponUI.instance.reloadbar.gameObject.SetActive(true);
+
+        //변수 개입
+       
+        WeaponUI.instance.TIMER = WeaponUI.instance.RELOAD;
+
         isreload = true;
         yield return new WaitForSeconds(reloadTime);
+
+        WeaponUI.instance.mainUI.gameObject.SetActive(true);
 
         isreload = false;
         leftBullet = maxBullet;
@@ -179,6 +188,8 @@ public class Gun : MonoBehaviour
                 break;
         }
 
+        WeaponUI.instance.RELOAD = reloadTime; //전체 재장전 시간 대입
+
         switch (selectSpt) //보조아이템 장착시 수정사항
         {
             case SelectSpt.ATK:
@@ -217,8 +228,6 @@ public class Gun : MonoBehaviour
         WeaponUI.instance.MAXMAIN = maxBullet;
         WeaponUI.instance.ISRELOAD = isreload;
 
-        WeaponUI.instance.RELOAD = reloadTime;
-
         switch (selectedMain) 
         {
             case SelectedMain.HG:
@@ -233,6 +242,18 @@ public class Gun : MonoBehaviour
             case SelectedMain.SR:
                 WeaponUI.instance.SR.gameObject.SetActive(true);
                 break;
+        }
+
+        //타이머 흐르게 하기
+        if (isreload == true) 
+        {
+            WeaponUI.instance.mainUI.gameObject.SetActive(false);
+            WeaponUI.instance.TIMER -= Time.deltaTime;
+
+            if (WeaponUI.instance.TIMER < 0)
+            {                
+                WeaponUI.instance.TIMER = WeaponUI.instance.RELOAD;
+            }          
         }
 
         //보조 무기
