@@ -47,6 +47,7 @@ GameObject:
   - component: {fileID: 2268632884932204801}
   - component: {fileID: 2268632884932204806}
   - component: {fileID: 2268632884932204807}
+  - component: {fileID: -4690820130777672643}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -163,17 +164,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   StartingHealth: 0
+  health: 0
   moveSpeed: 5
-  selectDodge: 2
+  animator: {fileID: 0}
   blinkDis: 10
   blinkcooldown: 5
   sprintSpeed: 7
   stamina: 0
   staminaMax: 5
-  player: {fileID: 0}
+  player: {fileID: 2268632884932204800}
   slidedis: 7
   slidecooldown: 5
-  moveSpt: 0
 --- !u!114 &2268632884932204806
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -200,3 +201,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weaponHold: {fileID: 2268632884120155208}
   startingGun: {fileID: 4624238054505644204, guid: 349a3abd423583049b890f98ff811d03, type: 3}
+--- !u!143 &-4690820130777672643
+CharacterController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2268632884932205055}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Height: 2
+  m_Radius: 0.5
+  m_SlopeLimit: 45
+  m_StepOffset: 0.3
+  m_SkinWidth: 0.08
+  m_MinMoveDistance: 0.001
+  m_Center: {x: 0, y: 0, z: 0}

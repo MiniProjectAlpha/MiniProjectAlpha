@@ -20,8 +20,8 @@ public class SteminaUI : MonoBehaviour
         get { return Stemina; }
         set
         {
-            Stemina = value;         
-            SteminaGUI.value = Stemina;
+            Stemina = value;
+            SteminaGUI.value = STEMINA;
         }
     }
 
@@ -43,7 +43,8 @@ public class SteminaUI : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {       
+    {
+        
         STEMINA += Time.deltaTime;
 
         if (STEMINA > MAXSTEMINA) 

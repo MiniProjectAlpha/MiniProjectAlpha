@@ -261,7 +261,7 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0
+  m_Value: 1
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -1466,7 +1466,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &515791451
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1728,8 +1728,8 @@ RectTransform:
   m_Father: {fileID: 1158276499}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMin: {x: 1, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -3167,6 +3167,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4957478770538164, guid: 46e18d94e2668c5479029197e6379a8e, type: 3}
   m_PrefabInstance: {fileID: 1015644126}
   m_PrefabAsset: {fileID: 0}
+--- !u!95 &1430238293 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 5937006933394893498, guid: 52eee0db4f82ff64fbda55af4db998a6, type: 3}
+  m_PrefabInstance: {fileID: 8448752156002858376}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1477195035
 GameObject:
   m_ObjectHideFlags: 0
@@ -4025,7 +4030,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -4445,6 +4450,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 8448752156450174275, guid: 52eee0db4f82ff64fbda55af4db998a6, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 8448752156450174275, guid: 52eee0db4f82ff64fbda55af4db998a6, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.55
+      objectReference: {fileID: 0}
+    - target: {fileID: 8448752156450174275, guid: 52eee0db4f82ff64fbda55af4db998a6, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1.63
+      objectReference: {fileID: 0}
     - target: {fileID: 8448752157448595238, guid: 52eee0db4f82ff64fbda55af4db998a6, type: 3}
       propertyPath: SteminaGUI
       value: 
@@ -4497,6 +4514,14 @@ PrefabInstance:
       propertyPath: m_IsKinematic
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8448752157504575500, guid: 52eee0db4f82ff64fbda55af4db998a6, type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 1430238293}
+    - target: {fileID: 8448752157504575500, guid: 52eee0db4f82ff64fbda55af4db998a6, type: 3}
+      propertyPath: startingGun
+      value: 
+      objectReference: {fileID: 3525750128577426226, guid: 1c4e0000933b7f04aaa7a4ab9559a56e, type: 3}
     - target: {fileID: 8448752157504575732, guid: 52eee0db4f82ff64fbda55af4db998a6, type: 3}
       propertyPath: m_Name
       value: Player

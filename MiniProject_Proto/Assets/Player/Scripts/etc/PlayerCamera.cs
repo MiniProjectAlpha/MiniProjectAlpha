@@ -19,7 +19,7 @@ public class PlayerCamera : MonoBehaviour
     {
         if (player != null) 
         {
-            maincamera.transform.position = player.transform.position + new Vector3(0, 19, -15);
+            maincamera.transform.position = player.transform.position + new Vector3(0, 10, -10);
         }
     }
 }

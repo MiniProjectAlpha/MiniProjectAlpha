@@ -57,7 +57,7 @@ public class HM_Gost_SpawnPool : MonoBehaviour
         {
             Spawn();
             a = 0;
-            print("Spawn");
+            //print("Spawn");
         }
     }
 

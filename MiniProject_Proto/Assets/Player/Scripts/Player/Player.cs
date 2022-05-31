@@ -15,6 +15,8 @@ public class Player : LivingEntity
     PlayerController controller;
     GunController gunController;
 
+    Gun equiedGun;
+
     public Animator animator;
 
     bool isPause;
@@ -112,7 +114,7 @@ public class Player : LivingEntity
         Ray ray = viewCamera.ScreenPointToRay(Input.mousePosition);
         Plane groundPlane = new Plane(Vector3.up, Vector3.zero);
 
-        if (dead == false && isPause == false) 
+        if (dead == false && isPause == false)
         {
             float rayDistance;
 
@@ -136,10 +138,12 @@ public class Player : LivingEntity
                 gunController.SubShoot();
             }
 
+            
             if (Input.GetKeyDown(KeyCode.R))
             {
                 gunController.Reload();
             }
+
 
             if (Input.GetKeyDown(KeyCode.Escape)) 
             {
@@ -310,6 +314,6 @@ public class Player : LivingEntity
     }
     #endregion
 
-
     
+
 }

@@ -49,13 +49,14 @@ public class Gun : MonoBehaviour
     public void Reload() //재장전
     {
         if (!isreload && leftBullet != maxBullet)
-        {
+        {            
             StartCoroutine(ReloadMove());
         }
     }
+
     IEnumerator ReloadMove() //재장전 매커니즘;
     {
-        isreload = true;
+        isreload = true;      
         yield return new WaitForSeconds(reloadTime);
 
         isreload = false;
