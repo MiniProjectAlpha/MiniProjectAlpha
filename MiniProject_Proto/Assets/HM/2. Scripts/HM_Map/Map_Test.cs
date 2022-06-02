@@ -47,9 +47,6 @@ public class Map_Test : MonoBehaviour
     void Update()
     {
         SetDoor();
-<<<<<<< Updated upstream
-=======
-        //print(open);
->>>>>>> Stashed changes
+
     }
 }
